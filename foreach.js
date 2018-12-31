@@ -1,7 +1,7 @@
-// Write _.each() method.
-
 const _ = {};
 
+
+// Implement _.each method.
 _.each = function(list, callback) {
     if (Array.isArray(list)) {
         //loop through array
@@ -16,7 +16,6 @@ _.each = function(list, callback) {
             callback(list[key], key, list);
         }
     }
-
 }
 
 
@@ -26,9 +25,9 @@ function CreateSuspectObjects(name) {
       color: name.split(' ')[1],   
       speak() {log(`my name is ${name}`);}
     }; 
-  }; 
+}; 
   
-  
+
 let suspects = ['Miss Scarlet', 'Colonel Mustard', 'Mr. White']; 
 
 let suspectsList = [];
@@ -37,5 +36,17 @@ _.each(suspects, function(name, i, list){
     suspectsList.push(CreateSuspectObjects(name));
 })
 
-console.log(suspectsList);
+// console.log(suspectsList);
 
+// Implement _.map method.
+_.map = function(list, callback) {
+
+    let results = [];
+    
+    for (let i = 0; i < list.length; i++){
+        results.push(callback(list[i]));
+    }
+    return results;
+}
+
+console.log(_.map([1, 2, 3], function(value) { return value + 1;}));
