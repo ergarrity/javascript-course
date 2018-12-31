@@ -36,7 +36,7 @@ _.each(suspects, function(name, i, list){
     suspectsList.push(CreateSuspectObjects(name));
 })
 
-// console.log(suspectsList);
+console.log(suspectsList);
 
 // Implement _.map method.
 _.map = function(list, callback) {
