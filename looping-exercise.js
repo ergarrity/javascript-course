@@ -20,7 +20,7 @@ function printSuspects() {
     }
 }
 
-// printSuspects();
+printSuspects();
 
 // Part 2: Loop through all of the properties of the suspects
 // object in the suspects array. Mark them if you think they
@@ -41,3 +41,26 @@ function printSuspectProperties() {
 }
 
 printSuspectProperties();
+
+// Part 3: Destructure this nested data structure into two variables
+// with the strings 'red' and 'orange'
+
+var suspects = [
+    {
+        name: "Rusty",
+        color: "orange"
+    }, {
+        name: "Miss Scarlet",
+        color: "red"
+    }
+];
+
+let [firstColor, secondColor] = [suspects[0].color, suspects[1].color];
+
+console.log(firstColor, secondColor);
+
+// ALT SOLUTION
+
+let [{color: colorOne}, {color: colorTwo}] = suspects;
+
+console.log(colorOne, colorTwo);
