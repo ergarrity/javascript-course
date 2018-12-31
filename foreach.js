@@ -13,7 +13,7 @@ _.each = function(list, callback) {
         //loop through object
         for (let key in list) {
             //call the callback with an object property value
-            callback(list[key], i, list);
+            callback(list[key], key, list);
         }
     }
 
@@ -29,9 +29,9 @@ function CreateSuspectObjects(name) {
   }; 
   
   
-var suspects = ['Miss Scarlet', 'Colonel Mustard', 'Mr. White']; 
-  
-var suspectsList = [];
+let suspects = ['Miss Scarlet', 'Colonel Mustard', 'Mr. White']; 
+
+let suspectsList = [];
 
 _.each(suspects, function(name, i, list){
     suspectsList.push(CreateSuspectObjects(name));
